@@ -45,7 +45,7 @@ module Nokogiri
       controller.read_fragment(key, options)
 
     rescue Redis::CannotConnectError, Redis::ConnectionError, Redis::TimeoutError => e
-      handle_error
+      handle_error(e)
       nil
     end
 
@@ -53,11 +53,11 @@ module Nokogiri
       controller.write_fragment(key, value, options)
 
     rescue Redis::CannotConnectError, Redis::ConnectionError, Redis::TimeoutError => e
-      handle_error
+      handle_error(e)
       nil
     end
 
-    def handle_error
+    def handle_error(e)
       Rails.logger.error 'Cache is not available'
     end
   end
