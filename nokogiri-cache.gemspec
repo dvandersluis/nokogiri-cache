@@ -10,7 +10,7 @@ Gem::Specification.new do |spec|
   spec.email         = ['daniel.vandersluis@gmail.com']
 
   spec.summary       = %q{Allow Rails to cache fragments of XML built by nokogiri}
-  spec.description   = %q{TODO: Write a longer description or delete this line.}
+  spec.description   = %q{Allow Rails to cache fragments of XML built by nokogiri}
   spec.homepage      = 'https://www.github.com/dvandersluis/nokogiri-cache'
   spec.license       = 'MIT'
 
